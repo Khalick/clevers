@@ -51,7 +51,7 @@
             <div class="col-xl-4 col-lg-4" data-aos="fade-up">
                 <div class="blogarea__content__wraper">
                     <div class="blogarea__img">
-                        <img loading="lazy"  src="https://admin.clevers.co.ke/storage/{{$wellness->image}}" alt="blog">
+                        <img loading="lazy"  src="https://admin.clevers.co.ke/storage/{{$art->image}}" alt="Art">
                         <div class="blogarea__date">
                             {!! $art->title !!}
                         </div>

@@ -111,6 +111,10 @@ Route::get('/gallery/like/{id}', function ($id) {
 });
 Route::get('/events/details/{id}',[MainController::class,'eventDetails']);
 Route::get('/counties',[MainController::class,'counties']);
+Route::get('/course/units/{id}',[MainController::class,'getCourseUnits']);
+Route::get('/refresh-csrf', function () {
+    return response()->json(['token' => csrf_token()]);
+});
 Route::get('/course/apply/{id}',[MainController::class,'apply']);
 Route::get('/jobs/details/{id}',[MainController::class,'jobDetails']);
 Route::get('/blog/details/{data}',[MainController::class,'blogDetails']);

@@ -38,6 +38,7 @@
                 $fT=true;
                 $count=1;
             @endphp
+            @if($events && $events->count() > 0)
             <div class="col-xl-12">
                 <ul class="nav  tab__button__wrap" id="myTab" role="tablist">
                     @foreach($events->keys() as $tabTitle)
@@ -102,7 +103,11 @@
                 @php $counter++; @endphp
                 @endforeach
         </div>
-
+            @else
+                <div class="col-12 text-center">
+                    <p class="text-muted">No upcoming events at the moment. Check back soon!</p>
+                </div>
+            @endif
 
     </div>
 </div>

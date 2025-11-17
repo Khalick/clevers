@@ -55,6 +55,13 @@
                 </div>
             @endif
 
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Error!</strong> {{ session('error') }}
+                </div>
+            @endif
+
             <div class="col-md-12">
                 <form method="post" id="application" action="/applications/new" enctype="multipart/form-data" onsubmit="return validateForm()">
                   @csrf
@@ -486,9 +493,9 @@
                                              data-bs-parent="#accordionExample6">
                                             <div class="accordion-body">
                                                 <div class="row d-flex justify-content-evenly">
-                                                    <div class="mb-4 col-md-4">
+                                                    <div class="mb-4 col-md-6">
                                                         <label class="form-label" for="course">Course Name</label>
-                                                        <select class="form-control form-select" id="course" name="course">
+                                                        <select class="form-control form-select" id="course" name="course" onchange="loadCourseUnits()">
                                                             @php
                                                                 $courses=\App\Models\Course::where('status','Active')->get();
                                                             @endphp
@@ -500,27 +507,7 @@
 
                                                         </select>
                                                     </div>
-                                                    <div class="mb-4 col-md-4">
-                                                        <label class="form-label" for="examiner">
-                                                            Examined By
-                                                        </label>
-                                                        <select  class="form-control form-select"  id="examiner" name="examiner">
-                                                            @php
-                                                                $examiners=\App\Models\Examiner::all();
-                     $f=true;
-                                                            @endphp
-                                                            @foreach($examiners as $examiner)
-                                                                @if($f)
-                                                                    <option selected value="{{$examiner->name}}" >{{$examiner->name}}</option>
-                                                                    @php $f=false; @endphp
-                                                                @else
-                                                                    <option  value="{{$examiner->name}}" >{{$examiner->name}}</option>
-
-                                                                @endif
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-4 col-md-4">
+                                                    <div class="mb-4 col-md-6">
                                                         <label class="form-label" for="mode">
                                                             Study Mode
                                                         </label>
@@ -535,6 +522,36 @@
                                                                     @php $f=false; @endphp
                                                                 @else
                                                                     <option  value="{{$mode->name}}" >{{$mode->name}}</option>
+
+                                                                @endif
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="mb-4 col-md-12">
+                                                        <label class="form-label">
+                                                            Select Subjects/Units <span class="text-info">(Select the units you want to study)</span>
+                                                        </label>
+                                                        <div id="unitsContainer" class="border rounded p-3" style="min-height: 100px;">
+                                                            <p class="text-muted">Loading subjects...</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-4 col-md-12">
+                                                        <label class="form-label" for="examiner">
+                                                            Examined By
+                                                        </label>
+                                                        <select  class="form-control form-select"  id="examiner" name="examiner">
+                                                            @php
+                                                                $examiners=\App\Models\Examiner::all();
+                     $f=true;
+                                                            @endphp
+                                                            @foreach($examiners as $examiner)
+                                                                @if($f)
+                                                                    <option selected value="{{$examiner->name}}" >{{$examiner->name}}</option>
+                                                                    @php $f=false; @endphp
+                                                                @else
+                                                                    <option  value="{{$examiner->name}}" >{{$examiner->name}}</option>
 
                                                                 @endif
                                                             @endforeach
@@ -654,6 +671,7 @@
 
         $(function (){
             getCounties();
+            loadCourseUnits(); // Load units on page load
             let mform = document.getElementById('application');
             FormPersistence.persist(mform);
             $('.btnNext').click(function(event) {
@@ -667,6 +685,40 @@
                 prevTab.show();
             });
         });
+        
+        function loadCourseUnits() {
+            const courseId = $('#course').val();
+            if (!courseId) return;
+            
+            $('#unitsContainer').html('<p class="text-muted">Loading subjects...</p>');
+            
+            $.ajax({
+                method: "GET",
+                url: "/course/units/" + courseId,
+                success: function(units) {
+                    if (units.length === 0) {
+                        $('#unitsContainer').html('<p class="text-muted">No subjects available for this course.</p>');
+                        return;
+                    }
+                    
+                    let html = '<div class="row">';
+                    units.forEach(function(unit) {
+                        html += '<div class="col-md-6 mb-2">';
+                        html += '<div class="form-check">';
+                        html += '<input class="form-check-input" type="checkbox" name="units[]" value="' + unit.id + '" id="unit' + unit.id + '">';
+                        html += '<label class="form-check-label" for="unit' + unit.id + '">' + unit.name + '</label>';
+                        html += '</div>';
+                        html += '</div>';
+                    });
+                    html += '</div>';
+                    
+                    $('#unitsContainer').html(html);
+                },
+                error: function() {
+                    $('#unitsContainer').html('<p class="text-danger">Error loading subjects. Please try again.</p>');
+                }
+            });
+        }
         function getCounties(){
             $.ajax({
                 method:"GET",
@@ -708,6 +760,13 @@
             }
 
         }
+
+        // Refresh CSRF token every 60 minutes to prevent expiration
+        setInterval(function() {
+            $.get('/refresh-csrf').done(function(data) {
+                $('input[name="_token"]').val(data.token);
+            });
+        }, 3600000); // 60 minutes
 
     </script>
 @endpush

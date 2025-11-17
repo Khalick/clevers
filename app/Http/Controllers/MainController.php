@@ -135,7 +135,7 @@ return back()->with(['type'=>'success','message'=>'You have been subscribed']);
         'nationalId'=>$ids,
         'slip'=>$slip,
         'department'=>Course::find($request->course)->category,
-        'others'=>[],
+        'others'=>$request->units ? $request->units : [],
     ]);
         return redirect('/courses')->with(['type'=>'success','message'=>'We will contact you via email with further details','title'=>'Your application has been submitted']);
     }
@@ -149,6 +149,12 @@ return \Response::json(['Nairobi','Nyandarua','Nyeri','Kirinyaga','Murang`a','Ki
     'Nakuru','Narok','Kajiado','Kericho','Bomet',
     'Siaya','Kisumu','Homa Bay','Migori','Kisii','Nyamira',
     'Kakamega','Vihiga','Bungoma','Busia']);
+    }
+    
+    function getCourseUnits($courseId)
+    {
+        $units = \App\Models\Unit::where('course_id', $courseId)->get(['id', 'name']);
+        return \Response::json($units);
     }
     function apply($id)
     {

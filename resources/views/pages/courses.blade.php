@@ -42,9 +42,9 @@
                             </div>
                             <div class="course__input">
                                 <form method="get" action="/courses">
-                                <input type="text" placeholder="Search product">
+                                <input type="text" name="search" placeholder="Search courses" value="{{$_GET['search'] ?? ''}}">
                                 <div class="search__button">
-                                    <button><i class="icofont-search-1"></i></button>
+                                    <button type="submit"><i class="icofont-search-1"></i></button>
                                 </div>
                                 </form>
                             </div>

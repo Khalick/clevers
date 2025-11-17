@@ -13,6 +13,7 @@
         </div>
         <div class="row row__custom__class testimonial__slider__active default__arrow" data-aos="fade-up">
             @php $alumnus=\App\Models\Testimonial::all(); @endphp
+            @if($alumnus && $alumnus->count() > 0)
             @foreach($alumnus as $alumni)
             <div class="col-xl-6 column__custom__class">
                 <div class="single__testimonial__wraper">
@@ -42,6 +43,11 @@
                 </div>
             </div>
             @endforeach
+            @else
+                <div class="col-12 text-center">
+                    <p class="text-muted">No testimonials available yet.</p>
+                </div>
+            @endif
 
         </div>
     </div>
