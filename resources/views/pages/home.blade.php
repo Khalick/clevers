@@ -1,0 +1,14 @@
+@extends('layouts.index')
+@section('title')
+    Home
+@endsection
+@section('content')
+    @include('partials.hero')
+    @include('partials.about')
+    @include('partials.categories')
+    @include('partials.courses')
+    @include('partials.student_life')
+    @include('partials.event_list')
+    @include('partials.alumni')
+    @include('partials.partners')
+@endsection
