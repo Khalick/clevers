@@ -67,36 +67,7 @@
                   @csrf
 
                     <div class="">
-                        <!-- Tab panes -->
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#st1">Personal Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st2">Medical History</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st3">Parent/Next Of Kin</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st4">Fee Payment</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st5">Education Background</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st6">Course Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st7">Attachments</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#st8">Submit</a>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content">
-                            <div class="tab-pane container-fluid active" id="st1">
+                        <div class="container-fluid">
                                 <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample1">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
@@ -186,176 +157,16 @@
                                     </div>
                                 </div>
 
-                                <div class="text-end">
-                                    <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st2">
                                 <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample2">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading2">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                                APPLICANT’S MEDICAL HISTORY
+                                                FEE PAYMENT DETAILS
                                             </button>
                                         </h2>
                                         <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
                                              data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body">
-                                                <div class="d-flex justify-content-evenly row">
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="history">
-                                                            Presence of pre-existing/chronic medical condition
-                                                        </label>
-                                                        <select id="history" name="history" class="form-control form-select">
-                                                            <option selected value="No">No</option>
-                                                            <option value="Yes">Yes</option>
-
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-8 mb-4">
-                                                        <label class="form-label" for="history">
-                                                            If Yes, Please state the condition <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <textarea id="condition" type="text" name="condition"
-                                                                  class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st3">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample3">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading3">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                                PARENT/NEXT OF KIN DETAILS
-                                            </button>
-                                        </h2>
-                                        <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3"
-                                             data-bs-parent="#accordionExample3">
-                                            <div class="accordion-body">
-                                                <div class="row d-flex justify-content-evenly">
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="father">Father's Name <span class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="text" maxlength="255" class="form-control" name="father"
-                                                               id="father"
-                                                               >
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="fatherEmail">Father's Email Address <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="email" maxlength="255" class="form-control" name="fatherEmail"
-                                                               id="fatherEmail"
-                                                               >
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="fatherPhone">Father's Phone Number <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="tel" maxlength="10" class="form-control" name="fatherPhone"
-                                                               id="fatherPhone"
-                                                               >
-                                                    </div>
-
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="mother">Mother's Name <span class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="text" maxlength="255" class="form-control" name="mother"
-                                                               id="mother"
-                                                               >
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="motherEmail">Mother's Email Address <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="email" maxlength="255" class="form-control" name="motherEmail"
-                                                               id="motherEmail"
-                                                               >
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="motherPhone">Mother's Phone Number <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="tel" maxlength="10" class="form-control" name="motherPhone"
-                                                               id="motherPhone"
-                                                               >
-                                                    </div>
-
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="nokName">Next Of Kin Name <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="text" maxlength="255" class="form-control" name="nokName"
-                                                               id="nokName">
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="nokEmail">Next Of Kin Email Address <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="email" maxlength="255" class="form-control" name="nokEmail"
-                                                               id="nokEmail">
-                                                    </div>
-                                                    <div class="col-md-4 mb-4">
-                                                        <label class="form-label" for="nokPhone">Next Of Kin Phone Number <span
-                                                                class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="tel" maxlength="10" class="form-control" name="nokPhone"
-                                                               id="nokPhone">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st4">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample4">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading4">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                                                FEE PAYMENT DETAILS
-                                            </button>
-                                        </h2>
-                                        <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4"
-                                             data-bs-parent="#accordionExample4">
                                             <div class="accordion-body">
                                                 <div class="row d-flex justify-content-evenly">
                                                     <div class="col-md-12 mb-4">
@@ -400,97 +211,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st5">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample5">
+                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample3">
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading5">
+                                        <h2 class="accordion-header" id="heading3">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                                                EDUCATION BACKGROUND
-                                            </button>
-                                        </h2>
-                                        <div id="collapse5" class="accordion-collapse collapse show" aria-labelledby="heading5"
-                                             data-bs-parent="#accordionExample5">
-                                            <div class="accordion-body">
-                                                <div class="row d-flex justify-content-evenly">
-                                                    <div class="mb-4 col-md-4">
-                                                        <label class="form-label" for="education">Highest Level Of Education Attained</label>
-                                                        <select class="form-control form-select" id="education" name="education">
-                                                            <option selected value="Primary">
-                                                                Not Applicable
-                                                            </option>
-                                                            <option selected value="Primary">
-                                                                Primary
-                                                            </option>
-                                                            <option  value="Secondary">
-                                                                Secondary
-                                                            </option>
-                                                            <option  value="Tertiary">
-                                                                Tertiary
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-4 col-md-4">
-                                                        <label class="form-label" for="grade">
-                                                            Grade Attained<span class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="text" class="form-control"  id="grade" name="grade">
-                                                    </div>
-                                                    <div class="mb-4 col-md-4">
-                                                        <label class="form-label" for="school">
-                                                            School Name<span class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="text" class="form-control"  id="school" name="school">
-                                                    </div>
-                                                    <div class="mb-4 col-md-4">
-                                                        <label class="form-label" for="year">
-                                                            Year Completed<span class="text-warning">(optional)</span>
-                                                        </label>
-                                                        <input type="number" minlength="4" max="{{intval(date('Y'))}}" maxlength="{{strlen(date('Y'))}}" class="form-control" id="year" name="year">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
-
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st6">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample6">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading6">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                                                    data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
                                                 COURSE APPLICATION DETAILS:
                                             </button>
                                         </h2>
-                                        <div id="collapse6" class="accordion-collapse collapse show" aria-labelledby="heading6"
-                                             data-bs-parent="#accordionExample6">
+                                        <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3"
+                                             data-bs-parent="#accordionExample3">
                                             <div class="accordion-body">
                                                 <div class="row d-flex justify-content-evenly">
                                                     <div class="mb-4 col-md-6">
@@ -564,30 +295,17 @@
                                     </div>
 
                                 </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st7">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample7">
+                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample4">
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading7">
+                                        <h2 class="accordion-header" id="heading4">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                                                    data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
                                                 ATTACHMENTS:
                                             </button>
                                         </h2>
-                                        <div id="collapse7" class="accordion-collapse collapse show" aria-labelledby="heading7"
-                                             data-bs-parent="#accordionExample7">
+                                        <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4"
+                                             data-bs-parent="#accordionExample4">
                                             <div class="accordion-body">
                                                 <div class="row d-flex justify-content-evenly">
                                                     <div class="col-md-4 mb-4">
@@ -614,21 +332,8 @@
                                     </div>
 
                                 </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" value="st1" class="btn btn-danger btnNext">Next</button>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="tab-pane container-fluid" id="st8">
-                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample8">
+                                <div class="accordion content__cirriculum__wrap mt-2" id="accordionExample5">
                                     <div class="accordion-item">
                                         <div class="accordion-body">
                                             <div class="form-check">
@@ -637,25 +342,16 @@
                                                     I hereby declare that the information I have provided above is correct and accurate. I have understood all the requirements for my studies/course and I accept to abide by all rules and regulations governing the students of this college throughout the course of my study.
                                                 </label>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row d-flex justify-content-evenly">
-                                    <div class="col-md-6 text-end">
-                                        <button type="button" value="st1" class="btn btn-secondary btnPrevious">Back</button>
-
-                                    </div>
-                                    <div class="col-md-6 text-end">
-                                        <button type="submit" value="st1" class="btn btn-danger btnNext">Submit Application</button>
-
-                                    </div>
-
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center mt-4">
+                                    <div class="col-md-6 text-center">
+                                        <button type="submit" class="btn btn-danger btn-lg">Submit Application</button>
+                                    </div>
+                                </div>
+                        </div>                    </div>
 
                 </form>
 
@@ -674,16 +370,6 @@
             loadCourseUnits(); // Load units on page load
             let mform = document.getElementById('application');
             FormPersistence.persist(mform);
-            $('.btnNext').click(function(event) {
-                const nextTabLinkEl = $('.nav-tabs .active').closest('li').next('li').find('a')[0];
-                const nextTab = new bootstrap.Tab(nextTabLinkEl);
-                nextTab.show()
-            });
-            $('.btnPrevious').click(function() {
-                const prevTabLinkEl = $('.nav-tabs .active').closest('li').prev('li').find('a')[0];
-                const prevTab = new bootstrap.Tab(prevTabLinkEl);
-                prevTab.show();
-            });
         });
         
         function loadCourseUnits() {
@@ -745,12 +431,6 @@
         }
 
         function validateForm() {
-            let history=$("#history").val();
-            if(history==="Yes" && !$("#condition").val()){
-                Swal.fire('You missed something','Please provide the medical condition','error')
-                return false;
-            }
-
             let feePayer=$("#feePayer").val();
             if (feePayer==="Other"){
                 if (!$("#feePayerName") || !$("#feePayerRelationShip") || !$("#feePayerPhone")){

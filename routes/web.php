@@ -39,6 +39,9 @@ Route::get('/campuses', function () {
 Route::get('/courses', function () {
     return view('pages.courses');
 });
+Route::get('/schools', function () {
+    return view('pages.schools');
+});
 Route::get('/library', function () {
     return view('pages.library');
 });

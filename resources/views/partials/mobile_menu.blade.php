@@ -91,7 +91,7 @@
                             <ul class="dropdown">
                                 <ul class="headerarea__submenu">
                                     <li><a href="/applications/new">New Applications</a></li>
-                                    <li><a href="/admission/process">Admission Process</a></li>
+                                    <li><a href="/applications/new#admission">Admission Process</a></li>
                                     <li><a href="/fees">Fee Payment</a></li>
                                     <li><a href="/international">International Students</a></li>
                                     <li><a href="/accommodation">Accommodation</a></li>

@@ -77,72 +77,72 @@
                                 <div class="default__small__button">The application process</div>
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-evenly">
-                            <div class="col-md-4 mt-2">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                        1.Explore Programs
-                                        </h4>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
+                                <div class="gridarea__wraper h-100" style="border: 2px solid #01579b; border-radius: 10px; padding: 30px; background: #fff;">
+                                    <div class="gridarea__heading mb-3">
+                                        <h3 style="color: #01579b; font-size: 24px;">
+                                            <i class="icofont-search-1" style="color: #ffd700;"></i> 1. Explore Programs
+                                        </h3>
                                     </div>
-                                    <div class="card-body">
-<p>
-    Take some time to explore the various programs offered at CLIPS. Our college caters to a wide range of disciplines, including Business Studies, Journalism and Media Studies, Hospitality and Tourism, Computer Science, Engineering, Hair and Beauty Therapy, and Fashion Design.
-</p>
+                                    <div class="gridarea__paragraph">
+                                        <p style="color: #333; line-height: 1.8;">
+                                            Take some time to explore the various programs offered at Clevers College. Our college caters to a wide range of disciplines, including Accounting, Business, IT, Languages, and many more professional courses.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                            2.Check Requirements
-                                        </h4>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
+                                <div class="gridarea__wraper h-100" style="border: 2px solid #01579b; border-radius: 10px; padding: 30px; background: #fff;">
+                                    <div class="gridarea__heading mb-3">
+                                        <h3 style="color: #01579b; font-size: 24px;">
+                                            <i class="icofont-checked" style="color: #ffd700;"></i> 2. Check Requirements
+                                        </h3>
                                     </div>
-                                    <div class="card-body">
-                                        <p>
+                                    <div class="gridarea__paragraph">
+                                        <p style="color: #333; line-height: 1.8;">
                                             Review the admission requirements for your chosen program. These may include specific academic qualifications, entry exams, or interviews. Ensure that you meet all the criteria to maximize your chances of successful admission.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                            3.Submit Application
-                                        </h4>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
+                                <div class="gridarea__wraper h-100" style="border: 2px solid #01579b; border-radius: 10px; padding: 30px; background: #fff;">
+                                    <div class="gridarea__heading mb-3">
+                                        <h3 style="color: #01579b; font-size: 24px;">
+                                            <i class="icofont-paper" style="color: #ffd700;"></i> 3. Submit Application
+                                        </h3>
                                     </div>
-                                    <div class="card-body">
-                                        <p>
+                                    <div class="gridarea__paragraph">
+                                        <p style="color: #333; line-height: 1.8;">
                                             Complete the online application form and submit all the required documents. Our admissions team will review your application and get back to you promptly. We encourage early applications to secure your place in your preferred program.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                            4.Application Fee
-                                        </h4>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
+                                <div class="gridarea__wraper h-100" style="border: 2px solid #01579b; border-radius: 10px; padding: 30px; background: #fff;">
+                                    <div class="gridarea__heading mb-3">
+                                        <h3 style="color: #01579b; font-size: 24px;">
+                                            <i class="icofont-cur-dollar" style="color: #ffd700;"></i> 4. Application Fee
+                                        </h3>
                                     </div>
-                                    <div class="card-body">
-                                        <p>
+                                    <div class="gridarea__paragraph">
+                                        <p style="color: #333; line-height: 1.8;">
                                             Pay the application fee as specified in the application process. This fee covers the administrative costs associated with processing your application. Details regarding payment methods will be provided in the application portal.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-2">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">
-                                            5.Notification
-                                        </h4>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
+                                <div class="gridarea__wraper h-100" style="border: 2px solid #01579b; border-radius: 10px; padding: 30px; background: #fff;">
+                                    <div class="gridarea__heading mb-3">
+                                        <h3 style="color: #01579b; font-size: 24px;">
+                                            <i class="icofont-envelope" style="color: #ffd700;"></i> 5. Notification
+                                        </h3>
                                     </div>
-                                    <div class="card-body">
-                                        <p>
+                                    <div class="gridarea__paragraph">
+                                        <p style="color: #333; line-height: 1.8;">
                                             Once your application has been reviewed, you will receive a formal notification of the admission decision. Successful applicants will be provided with further instructions on the enrollment process.
                                         </p>
                                     </div>
